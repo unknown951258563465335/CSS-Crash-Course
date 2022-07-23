@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    width: 96%;
+}
+h1,table{
+    margin: 2%;
+}
+.heading{
+    background-color: rgb(5, 170, 5);
+    font-weight: 600;
+    color: white;
+}
+
+.heading td{
+    padding: 10px;
+}
+.first-r{
+    background-color: lightgrey;
+}
+td{
+    padding: 10px;
+}
