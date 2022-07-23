@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
 }
-table{
-    width: 96%;
-}
+
 h1,table{
+    width: 96%;
     margin: 2%;
+}
+tr:nth-child(even){
+    background-color: lightgrey;
 }
 .heading{
     background-color: rgb(5, 170, 5);
@@ -16,9 +18,6 @@ h1,table{
 
 .heading td{
     padding: 10px;
-}
-.first-r{
-    background-color: lightgrey;
 }
 td{
     padding: 10px;
