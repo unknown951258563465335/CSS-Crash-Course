@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;   
+}
+.topHeading{
+    margin: 30px;
+    box-sizing: border-box;
+}
+.textArea{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    width: 40vw;
+    min-height: 15rem;
+    resize: none;
+    padding: 10px;
+}
+.note{
+    margin: 10px;
+    width: 40vw;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    flex-direction: row;
+}
+.cBorder{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 1rem;
+    min-height: 20vh;
+    width: 15em;
+}
+.btn0{
+    background-color: #5b5bec;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 7em;
+    border: none;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cBorder button{
+    cursor: pointer;
+    background-color: #5b5bec;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+}
