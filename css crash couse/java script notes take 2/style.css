@@ -69,3 +69,15 @@ textarea:focus{
 .cards-border button{
     width: 90%;
 }
+.searchInput{
+    margin: 4vh;
+    color: black;
+    background-color:#d3d3d38f;
+    border: none;
+    border-radius: 10px;
+    width: 40vw;
+    padding: 10px;
+}
+.searchInput:focus{
+    background-color: white;
+}
