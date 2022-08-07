@@ -21,9 +21,9 @@
     margin-top: 3vh;
 }
 #edit{
-    
+    padding: 10px;
     resize:vertical;
-    width: 100%;
+    width: 90%;
     min-height: 20vh;
 }
 .textArea textarea{
