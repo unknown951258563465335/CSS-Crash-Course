@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    padding: 0;
+}
+.container{
+    display: flex;
+    min-height: 100vh;
+    background-color: black;
+}
+.hero{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.hero h2{
+    color:#ff3c00;
+    font-size: 1.5em;
+}
+.typing{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.hero h1::before{
+    content: 'I am ';
+}
+.hero h1{
+    font-size: 2.5em;
+    color: white;
+    text-transform:capitalize;
+  
+}
+span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+
+  
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+.hero img{
+    height: 85vh;
+}
+.navigation{
+    background-color: rgb(21, 21, 21);
+    color: white;
+    display: flex;
+    align-items: center;
+    /* display: none; */
+    flex-direction: column;
+    width:14rem;
+    min-height: 100vh;
+}
+.navigation li{
+    list-style: none;
+    font-size: 20px;
+    padding: 2px;
+}
+.logo img{
+    border-radius: 50%;
+    width: 10vw;
+    margin-bottom: 4px;
+}
+.logo h3{
+    text-align: center;
+}
+.logo{
+    margin-top: 20px;
+    font-size: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
