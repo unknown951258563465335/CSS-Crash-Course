@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.textArea{
+    text-align: center;
+    margin: 3vh;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid lightgrey;
+    flex-direction: column;
+    box-shadow:  2px 4px 25px 10px rgb(230, 230, 230);
+    
+}
+.textArea h1{
+    margin-top: 3vh;
+}
+#edit{
+    padding: 10px;
+    resize:vertical;
+    width: 90%;
+    min-height: 20vh;
+}
+.textArea textarea{
+    border-radius: 5px;
+    margin: 0 10px;
+    background-color: #d3d3d3ad;;
+    border: none;
+    margin-top: 3vh;
+    width: 60vw;
+    padding: 10px;
+    min-height: 30vh;
+    resize:vertical;
+}
+.textArea input{
+    border-radius: 5px;
+    margin: 0 10px;
+    background-color: #d3d3d3ad;;
+    border: none;
+    margin-top: 3vh;
+    width: 60vw;
+    padding: 10px;
+    resize:vertical;
+}
+textarea:focus{
+    background-color: white;
+}
+input:focus{
+    background-color: white;
+}
+.container button{
+    color: white;
+    padding: 10px;
+    margin:10px;
+    background-color: blue;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    width: 10rem;
+}
+.notes{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65vw;
+    flex-wrap: wrap;
+}
+.cards-border{
+    border: 1px solid lightgrey;
+    margin: 2vh;
+    padding: 20px 10px;
+    box-shadow: 0 6px 20px 10px  rgb(230, 230, 230);
+    border-radius: 10px;
+    width: 14rem;
+}
+.cards-border button{
+    width: 90%;
+}
+.searchInput{
+    margin: 4vh;
+    color: black;
+    background-color:#d3d3d38f;
+    border: none;
+    border-radius: 10px;
+    width: 40vw;
+    padding: 10px;
+}
+.searchInput:focus{
+    background-color: white;
+}
