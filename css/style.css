@@ -100,7 +100,7 @@ section {
 
 .background {
     min-height: 100vh;
-    background-image: url('imgs/jeremy-bishop-8xznAGy4HcY-unsplash.jpg');
+    background-image: url('/imgs/jeremy-bishop-8xznAGy4HcY-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -172,7 +172,7 @@ section {
 /* about page css */
 .about{
     min-height: 100vh;
-    background-image: url('imgs/leone-venter-VieM9BdZKFo-unsplash.jpg');
+    background-image: url('/imgs/leone-venter-VieM9BdZKFo-unsplash.jpg');
     background-size: cover;
     position: sticky;
     bottom: 0px;
