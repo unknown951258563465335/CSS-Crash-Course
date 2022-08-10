@@ -1,0 +1,31 @@
+* {
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    text-transform: uppercase;
+}
+header{
+    border: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+}
+.right-header-section{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.darkBtn{
+    margin: 10px;
+    width: 45px;
+    height: 24px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+.margin{
+    margin: 10px;
+}

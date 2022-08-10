@@ -46,7 +46,8 @@
     flex-direction: column;
     width: 15rem;
     min-height: 100vh;
-    position:fixed;
+    position: fixed;
+    z-index: 4;
 }
 
 .navigation li {
@@ -101,6 +102,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
     box-shadow: -4px 10px 20px #000000ab;
 
 }
@@ -165,28 +169,32 @@
 
 
 /* about page css */
-.about{
+.about {
     min-height: 100vh;
     background-image: url('/imgs/leone-venter-VieM9BdZKFo-unsplash.jpg');
     background-size: cover;
     position: sticky;
     bottom: 0px;
-    z-index: -1;
+    z-index: 2;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    box-shadow: -4px 10px 20px #000000ab;
 }
-.about img{
+
+.about img {
     height: 50vh;
     border-radius: 10px;
-    box-shadow:  4px 10px 20px #00000070;
+    box-shadow: 4px 10px 20px #00000070;
 }
-.about-inner{
+
+.about-inner {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+
 /* .stripe{
     min-height: 40vh;
     width: 100%;
@@ -194,14 +202,15 @@
     position: absolute;
     z-index: -1;
 } */
-.about-heading{
+.about-heading {
     font-size: 30px;
     font-family: 'Oleo Script Swash Caps', cursive;
 }
-.about .about-inner p{
+
+.about .about-inner p {
     /* border: 1px solid black; */
     border-radius: 10px;
-    background-color:#0000006b;
+    background-color: #0000006b;
     color: white;
     padding: 20px;
     text-align: center;
@@ -210,24 +219,28 @@
     width: 30%;
     font-family: 'Inconsolata', monospace;
 }
-@media only screen and (max-width: 600px) {
-    .about{
+
+@media only screen and (max-width: 850px) {
+    .about {
         background-color: lightgrey;
         background-image: none;
     }
-    .about img{
+
+    .about img {
         height: 40vh;
     }
-    .about-inner{
+
+    .about-inner {
         flex-direction: column;
     }
-    .about .about-inner p{
+
+    .about .about-inner p {
         margin: 20px;
         width: 80%;
         min-height: 5vh;
         font-size: 16px;
-        color:black;
-        background-color:transparent;
+        color: black;
+        background-color: transparent;
     }
 }
 
@@ -235,31 +248,88 @@
 
 
 /* skills */
-.skills{
+.skills {
     min-height: 100vh;
     background-image: url('/imgs/brandi-redd-aJTiW00qqtI-unsplash2.jpg');
     background-size: cover;
     position: sticky;
     bottom: 0px;
-    z-index: -2;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.skills span {
+    color: #c1c1c1;
+    position: absolute;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.skills h3 {
+    margin-top: 20px;
+    color: #c1c1c1;
+}
+
+.skills-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+
+}
+
+.outer-cards {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: lightgrey;
+    flex-wrap: wrap;
 }
-.skills h3{
-    color: #c1c1c1;
-    margin-top: 5vh;
-}
-.flex-coloum{
+
+.center {
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 15px;
-    background-image: linear-gradient(to right, rgb(19, 19, 19) , rgb(62, 62, 62));
-    padding: 10vh;
+    background-image: linear-gradient(to right, rgb(19, 19, 19), rgb(62, 62, 62));
+    min-height: 35vh;
+    width: 15vw;
     cursor: pointer;
-    
+}
+
+.flex-coloum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, rgb(19, 19, 19), rgb(62, 62, 62));
+    min-height: 50vh;
+    width: 20vw;
+    cursor: pointer;
+    box-shadow: -4px 10px 20px #000000ab;
+}
+
+svg {
+    width: 13vw;
+}
+
+svg:hover {
+    width: 15vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .skills span {
+        font-size: 14px;
+    }
+
+    .flex-coloum {
+        width: 28vw;
+    }
 
 }
