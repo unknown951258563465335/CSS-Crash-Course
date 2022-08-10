@@ -93,11 +93,6 @@
     display: none;
 }
 
-
-section {
-    min-height: 100vh;
-}
-
 .background {
     min-height: 100vh;
     background-image: url('/imgs/jeremy-bishop-8xznAGy4HcY-unsplash.jpg');
@@ -234,4 +229,37 @@ section {
         color:black;
         background-color:transparent;
     }
+}
+
+
+
+
+/* skills */
+.skills{
+    min-height: 100vh;
+    background-image: url('/imgs/brandi-redd-aJTiW00qqtI-unsplash2.jpg');
+    background-size: cover;
+    position: sticky;
+    bottom: 0px;
+    z-index: -2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgrey;
+}
+.skills h3{
+    color: #c1c1c1;
+    margin-top: 5vh;
+}
+.flex-coloum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, rgb(19, 19, 19) , rgb(62, 62, 62));
+    padding: 10vh;
+    cursor: pointer;
+    
+
 }
