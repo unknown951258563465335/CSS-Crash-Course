@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.upperContainer {
+    display: flex;
+    /* border: 1px solid black; */
+    min-height: 40vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    margin-top: 40px;
+    width: 70%;
+}
+
+.input input {
+    background-color: lightgrey;
+    border: none;
+    color: black;
+    padding: 15px;
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.lOptions select {
+    border: none;
+    color: white;
+    padding: 15px;
+    background-color: grey;
+    border-radius: 10px 0px 0px 10px;
+    /* background-color: blue; */
+}
+
+.heading {
+    font-size: 25px;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 40px;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border: none;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: lightgrey;
+    color: black;
+}
+.btn{
+    background-color: rgb(54, 54, 197);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}

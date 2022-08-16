@@ -24,7 +24,7 @@ function addNotes() {
         showNotes()
     }
 }
-function showNotes() {
+let showNotes = function() {
     let notes = localStorage.getItem('notes');
     let title = localStorage.getItem('notesTitle');
     let cards = document.querySelector('.cards')
@@ -62,12 +62,14 @@ function editBtn(index) {
     </div>`
     cards.innerHTML = html
 }
+
+
 function saveBtn(index) {
     text = document.getElementById('edit')
     let notes = localStorage.getItem('notes');
     notesArray = JSON.parse(notes);
     notesArray[index] = text.value
-    localStorage.setItem('notes' , JSON.stringify(notesArray));
+    localStorage.setItem('notes', JSON.stringify(notesArray));
     showNotes()
 
 }
@@ -92,12 +94,12 @@ function delBtn(index) {
 }
 function searchNotes() {
     cards = document.getElementsByClassName('cards-border')
-    Array.from(cards).forEach(function(element){
+    Array.from(cards).forEach(function (element) {
         content = element.getElementsByTagName('h3')[0].innerText
-        if(content.includes(search.value.toLowerCase())){
+        if (content.includes(search.value.toLowerCase())) {
             element.style.display = 'block'
         }
-        else{
+        else {
             element.style.display = 'none'
         }
     })
