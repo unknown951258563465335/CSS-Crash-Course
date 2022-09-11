@@ -96,7 +96,7 @@
 
 .background {
     min-height: 100vh;
-    background-image: url('/imgs/jeremy-bishop-8xznAGy4HcY-unsplash.jpg');
+    background-image: url('/imgs/mountains.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -171,7 +171,7 @@
 /* about page css */
 .about {
     min-height: 100vh;
-    background-image: url('/imgs/leone-venter-VieM9BdZKFo-unsplash.jpg');
+    background-image: url('/imgs/laptop.jpg');
     background-size: cover;
     position: sticky;
     bottom: 0px;
@@ -250,7 +250,7 @@
 /* skills */
 .skills {
     min-height: 100vh;
-    background-image: url('/imgs/brandi-redd-aJTiW00qqtI-unsplash2.jpg');
+    background-image: url('/imgs/paper.jpg');
     background-size: cover;
     position: sticky;
     bottom: 0px;

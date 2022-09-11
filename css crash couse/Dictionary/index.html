@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <input id="searchInput" type="text">
+    <button id="search">Search</button>
+    <div class="words">
+      <ul id="list"></ul>
+    </div>
+  </div>
+
+  <script>
+    let sInput = document.getElementById('searchInput')
+    let searchbtn = document.getElementById('search')
+
+    searchbtn.addEventListener('click', func)
+
+    function func() {
+      let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${sInput.value}`
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true)
+      xhr.onload = function () {
+
+
+        let obj = JSON.parse(this.responseText)
+
+        for (let index = 0; index < obj.length; index++) {
+          document.getElementById('list').innerHTML = obj[index].meanings[index].definitions[index].definition
+        }
+
+
+      }
+      xhr.send()
+    }
+
+  </script>
+
+</body>
+
+</html>
