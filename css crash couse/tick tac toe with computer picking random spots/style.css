@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer_box input{
+    width: 60px;
+    height:  60px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 900;
+    font-size: larger;
+}

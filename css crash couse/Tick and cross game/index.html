@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .heading{
+        margin: 20px;
+        color: white;
+      }
+      .container {
+        display: flex;
+        min-height: 100vh;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      input {
+        border-radius: 10px;
+        width: 5rem;
+        min-height: 5rem;
+        border: none;
+        margin: 2px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 2em;
+        font-weight: 900;
+      }
+      #reset{
+        padding: 10px 20px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="popup"></div>
+      <div class="heading">
+        <h1>Tick And Cross</h1>
+      </div>
+      <div class="block_outer">
+        <input id="0" type="text" readonly onclick="tick_cross(this,this.id)" />
+        <input id="1" type="text" readonly onclick="tick_cross(this,this.id)" />
+        <input id="2" type="text" readonly onclick="tick_cross(this,this.id)" />
+      </div>
+      <div class="block_outer">
+        <input id="3" type="text" readonly onclick="tick_cross(this,this.id)" />
+        <input id="4" type="text" readonly onclick="tick_cross(this,this.id)" />
+        <input id="5" type="text" readonly onclick="tick_cross(this,this.id)" />
+      </div>
+      <div class="block_outer">
+        <input id="6" type="text" readonly onclick="tick_cross(this,this.id)" />
+        <input id="7" type="text" readonly onclick="tick_cross(this,this.id)" />
+        <input id="8" type="text" readonly onclick="tick_cross(this,this.id)" />
+      </div>
+      <button id="reset">Reset</button>
+    </div>
+
+    <script>
+      function winner() {
+        if (index % 2 == 0) {
+          alert('Tick won')
+          reset();
+        } else {
+          alert('Cross won')
+
+          reset();
+        }
+        index = 0;
+      }
+      function reset() {
+        Array.from(boxes).forEach((element) => {
+          element = element.children;
+          Array.from(element).forEach((element) => {
+            element.value = "";
+            index = 0;
+            p1_row = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+            p2_row = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+          });
+        });
+      }
+      let index = 0;
+      let p1_row = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+      let p2_row = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+      function tick_cross(blocks, id) {
+        if (index % 2 == 0 && blocks.value == "") {
+          blocks.value = "X";
+          p1_row[id] = 1;
+          // emptySpaces()
+          let spaces = emptySpaces()
+          computer(spaces)
+        }
+        if (index % 2 != 0 && blocks.value == "") {
+          blocks.value = "0";
+          p2_row[id] = 1;
+          emptySpaces()
+        }
+        index++;
+        if (
+          (p1_row[0] == 1 && p1_row[1] == 1 && p1_row[2] == 1) ||
+          (p2_row[0] == 1 && p2_row[1] == 1 && p2_row[2] == 1)
+        ) {
+          winner();
+        }
+        if (
+          (p1_row[3] == 1 && p1_row[4] == 1 && p1_row[5] == 1) ||
+          (p2_row[3] == 1 && p2_row[4] == 1 && p2_row[5] == 1)
+        ) {
+          winner();
+        }
+        if (
+          (p1_row[6] == 1 && p1_row[7] == 1 && p1_row[8] == 1) ||
+          (p2_row[6] == 1 && p2_row[7] == 1 && p2_row[8] == 1)
+        ) {
+          winner();
+        }
+        if (
+          (p1_row[0] == 1 && p1_row[3] == 1 && p1_row[6] == 1) ||
+          (p2_row[0] == 1 && p2_row[3] == 1 && p2_row[6] == 1)
+        ) {
+          winner();
+        }
+        if (
+          (p1_row[1] == 1 && p1_row[4] == 1 && p1_row[7] == 1) ||
+          (p2_row[1] == 1 && p2_row[4] == 1 && p2_row[7] == 1)
+        ) {
+          winner();
+        }
+        if (
+          (p1_row[2] == 1 && p1_row[5] == 1 && p1_row[8] == 1) ||
+          (p2_row[2] == 1 && p2_row[5] == 1 && p2_row[8] == 1)
+        ) {
+          winner();
+        }
+        if (
+          (p1_row[0] == 1 && p1_row[4] == 1 && p1_row[8] == 1) ||
+          (p2_row[0] == 1 && p2_row[4] == 1 && p2_row[8] == 1)
+        ) {
+          winner();
+        }
+        if (
+          (p1_row[2] == 1 && p1_row[4] == 1 && p1_row[6] == 1) ||
+          (p2_row[2] == 1 && p2_row[4] == 1 && p2_row[6] == 1)
+        ) {
+          winner();
+        }
+      }
+
+
+      function emptySpaces() {
+        let array1 = []
+        let array2 = []
+        let Places = []
+        p1_row.forEach(element => {
+          array1.push(element)
+        });
+        p2_row.forEach(element => {
+          array2.push(element)
+        });
+        for (let index = 0; index < array1.length; index++) {
+          if(array1[index] == array2[index]){
+            Places.push(index)
+          }
+        }
+        return Places
+      }
+
+      function computer(spaces) {
+        // let pattern = [
+        //   [0,1,2],
+        //   [3,4,5],
+        //   [6,7,8],
+        //   [0,3,6],
+        //   [1,4,7],
+        //   [2,5,8],
+        //   [0,4,8],
+        //   [2,4,6]
+        // ]
+        console.log(spaces)
+      }
+      let resetBtn = document.getElementById("reset");
+      let boxes = document.getElementsByClassName("block_outer");
+      resetBtn.addEventListener("click", reset);
+    </script>
+  </body>
+</html>
